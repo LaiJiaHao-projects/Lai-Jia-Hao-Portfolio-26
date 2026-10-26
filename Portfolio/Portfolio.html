@@ -1,735 +1,849 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Lai Jia Hao | Marketing Intern Portfolio</title>
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Lai Jia Hao Portfolio</title>
+<meta name="claude:viewport-fit-sides" content="cover">
 <meta name="description" content="Sunway University marketing student specialising in social media strategy, content design and live event logistics.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,200..800&family=Instrument+Sans:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap">
 <style>
+
 :root{
-  --navy:#0e2238;
-  --navy-2:#16314f;
-  --teal:#3f7f84;
-  --orange:#e8643c;
-  --cream:#f9f3ea;
-  --cream-2:#f1e8da;
-  --ink:#1b2a3a;
-  --muted:#5b6b7a;
-  --radius:14px;
-  --display:'Bebas Neue','Oswald',Impact,sans-serif;
-  --head:'Oswald','Arial Narrow',sans-serif;
-  --body:'Roboto',system-ui,sans-serif;
+  --paper:#eceff7;
+  --card:#f8f9fd;
+  --sunk:#dfe4f2;
+  --ink:#0f1330;
+  --ink-2:#4b5175;
+  --line:rgba(15,19,48,.16);
+  --cobalt:#3144ff;
+  --band:#2f41f5;
+  --on-band:#ffffff;
+  --hl:#ffe24a;
+  --on-hl:#0f1330;
+  --focus:#3144ff;
+  --f-display:'Bricolage Grotesque','Arial Narrow',Arial,sans-serif;
+  --f-body:'Instrument Sans',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --f-mono:'DM Mono',ui-monospace,SFMono-Regular,Menlo,monospace;
 }
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;scroll-padding-top:70px}
-body{font-family:var(--body);background:var(--cream);color:var(--ink);line-height:1.6;overflow-x:hidden}
-img,svg{display:block;max-width:100%}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --paper:#0b0f24;--card:#121835;--sunk:#181e42;--ink:#eef0ff;--ink-2:#a6acd6;
+    --line:rgba(238,240,255,.17);--cobalt:#8f9bff;--focus:#aab3ff;color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0b0f24;--card:#121835;--sunk:#181e42;--ink:#eef0ff;--ink-2:#a6acd6;
+  --line:rgba(238,240,255,.17);--cobalt:#8f9bff;--focus:#aab3ff;color-scheme:dark;
+}
+
+*{box-sizing:border-box}
+html{scroll-padding-top:72px}
+html.lenis,html.lenis body{height:auto}
+.lenis.lenis-smooth{scroll-behavior:auto!important}
+.lenis.lenis-stopped{overflow:hidden}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 1rem/1.6 var(--f-body);-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--paper)}
+img{display:block;max-width:100%}
 a{color:inherit}
-.wrap{width:min(1120px,92%);margin-inline:auto}
-section{padding:96px 0;position:relative}
-.eyebrow{font-family:var(--head);letter-spacing:.22em;text-transform:uppercase;font-size:.8rem;color:var(--teal);font-weight:600;display:flex;align-items:center;gap:12px;margin-bottom:10px}
-.eyebrow b{color:var(--orange);font-family:var(--display);font-size:1.6rem;letter-spacing:.04em;font-weight:400}
-h2.title{font-family:var(--display);font-weight:400;color:var(--navy);font-size:clamp(3rem,8vw,5.6rem);line-height:.92;letter-spacing:.01em}
-.bar{width:84px;height:7px;background:var(--orange);margin:22px 0;border-radius:2px}
-.lead{max-width:560px;color:var(--muted);font-size:1.05rem}
+h1,h2,h3,h4,p,ul,ol,dl,dd,figure{margin:0}
+ul,ol{padding:0;list-style:none}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--focus);outline-offset:3px;border-radius:2px}
+mark{background:var(--hl);color:var(--on-hl);padding:0 .22em;border-radius:2px;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+
+.wrap{width:100%;max-width:1240px;margin-inline:auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+section{padding-block:clamp(72px,10vw,136px)}
+h2{font-family:var(--f-display);font-weight:700;font-variation-settings:'wdth' 88;font-size:clamp(2.5rem,5.0vw,5rem);line-height:.98;letter-spacing:-.025em;text-wrap:balance}
+.lead{max-width:46ch;color:var(--ink-2);font-size:1.06rem;text-wrap:pretty}
+.sec-head{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:24px 48px;align-items:end;margin-bottom:clamp(36px,5vw,64px)}
+.sec-head .lead{justify-self:end}
+.sec-head .lead strong{display:block;color:var(--ink);font-family:var(--f-display);font-weight:600;font-size:1.25rem;line-height:1.25;margin-bottom:8px}
 
 /* NAV */
-nav{position:fixed;inset:0 0 auto 0;z-index:50;background:rgba(14,34,56,.94);backdrop-filter:blur(8px);transition:box-shadow .3s}
-nav.scrolled{box-shadow:0 6px 24px rgba(0,0,0,.25)}
-.nav-in{display:flex;align-items:center;justify-content:space-between;height:60px}
-.logo{font-family:var(--head);color:#fff;letter-spacing:.16em;font-size:.85rem;text-decoration:none;text-transform:uppercase;font-weight:600}
-.logo span{color:var(--orange)}
-.links{display:flex;gap:14px;list-style:none}
-.links a{display:inline-block;color:#dfe7ee;text-decoration:none;font-family:var(--head);letter-spacing:.12em;font-size:.76rem;text-transform:uppercase;padding:12px 6px;border-bottom:2px solid transparent;transition:.25s}
-.links a:hover,.links a.active{color:#fff;border-color:var(--orange)}
-.burger{display:none;background:none;border:0;width:40px;height:40px;cursor:pointer}
-.burger span{display:block;width:24px;height:2px;background:#fff;margin:5px auto;transition:.3s}
-.progress{position:absolute;left:0;bottom:0;height:3px;background:var(--orange);width:0}
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--paper);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:60px}
+.brand{font:700 1.05rem/1 var(--f-display);letter-spacing:-.01em;text-decoration:none;white-space:nowrap}
+.links{display:flex;gap:4px}
+.links a{display:block;padding:10px 12px;border-radius:2px;text-decoration:none;font-size:.92rem;font-weight:500;color:var(--ink-2);transition:color .2s}
+.links a:hover,.links a.on{color:var(--ink);box-shadow:inset 0 -2px 0 var(--cobalt)}
+.menu-btn{display:none;background:none;border:1px solid var(--line);border-radius:2px;padding:8px 14px;cursor:pointer;font-size:.9rem;font-weight:500}
+.bar{position:absolute;left:0;bottom:-1px;height:2px;width:100%;background:var(--cobalt);transform:scaleX(0);transform-origin:left}
 
 /* HERO */
-#profile{padding-top:140px;background:linear-gradient(135deg,transparent 78%,var(--navy) 78%,var(--navy) 88%,transparent 88%),var(--cream);overflow:hidden}
-.hero{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
-.hero h1{font-family:var(--display);font-weight:400;font-size:clamp(5rem,17vw,12rem);line-height:.85;color:var(--navy);letter-spacing:.01em}
-.hero .name{font-family:var(--head);font-weight:700;color:var(--teal);font-size:clamp(1.8rem,4vw,2.8rem);margin-top:6px}
-.hero p{margin-top:16px;max-width:520px;font-size:1.08rem}
-.hero p strong{color:var(--navy)}
-.pills{display:flex;gap:28px;margin-top:34px;flex-wrap:wrap}
-.pill{display:flex;align-items:center;gap:14px;font-family:var(--head);font-weight:600;color:var(--navy);line-height:1.2;font-size:1.02rem}
-.pill i{width:62px;height:62px;border-radius:50%;display:grid;place-items:center;flex:none}
-.pill i svg{width:30px;height:30px;stroke:#fff;fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
-.cta{display:flex;gap:14px;margin-top:34px;flex-wrap:wrap}
-.btn{display:inline-block;padding:14px 28px;border-radius:50px;font-family:var(--head);letter-spacing:.14em;text-transform:uppercase;font-size:.82rem;font-weight:600;text-decoration:none;transition:.25s;border:2px solid var(--orange)}
-.btn.solid{background:var(--orange);color:#fff}
-.btn.solid:hover{background:#cf4f28;border-color:#cf4f28;transform:translateY(-2px)}
-.btn.ghost{color:var(--navy);border-color:var(--navy)}
-.btn.ghost:hover{background:var(--navy);color:#fff;transform:translateY(-2px)}
+.hero{padding-top:clamp(28px,4vw,56px);padding-bottom:clamp(44px,6vw,80px)}
+.hero-meta{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:.95rem;color:var(--ink-2)}
+.clock{font-family:var(--f-mono);font-size:.88rem}
+.name{font-family:var(--f-display);font-weight:600;font-size:min(21vw,15rem);line-height:.9;letter-spacing:-.035em;margin-top:clamp(18px,3vw,40px);font-variation-settings:'wght' 560,'wdth' 100;font-optical-sizing:auto}
+.name .line{display:block;white-space:nowrap}
+.name .ch{display:inline-block}
+.name .sp{display:inline-block;width:.2em}
+.hero-foot{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:32px clamp(32px,6vw,96px);margin-top:clamp(28px,4vw,52px);align-items:start}
+.hero-foot p{max-width:48ch;font-size:1.12rem;text-wrap:pretty}
+.hero-foot p+p{margin-top:14px;color:var(--ink-2)}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn{display:inline-block;padding:14px 26px;border-radius:2px;font-weight:600;font-size:.98rem;text-decoration:none;border:1.5px solid var(--ink);background:var(--ink);color:var(--paper);cursor:pointer;will-change:transform}
+.btn.ghost{background:transparent;color:var(--ink)}
+.facts{display:grid;gap:0}
+.facts div{display:grid;grid-template-columns:7.5rem minmax(0,1fr);gap:12px;padding:14px 0;border-top:1px solid var(--line)}
+.facts div:last-child{border-bottom:1px solid var(--line)}
+.facts dt{color:var(--ink-2);font-size:.92rem}
+.facts dd{font-weight:500}
 
-/* Insta frame */
-.frame{position:relative;max-width:380px;margin-inline:auto;transform:rotate(3deg);transition:transform .5s}
-.frame:hover{transform:rotate(0)}
-.post{background:#fbf8f2;border-radius:18px;padding:18px 18px 14px;box-shadow:0 30px 60px -20px rgba(14,34,56,.45),0 0 0 1px rgba(0,0,0,.05)}
-.post-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
-.dot{width:34px;height:34px;border-radius:50%;background:var(--teal)}
-.dots{letter-spacing:3px;font-weight:900;color:var(--navy)}
-.post-img{aspect-ratio:1;background:var(--teal);border-radius:4px;position:relative;overflow:hidden;display:grid;place-items:center}
-.post-img::before{content:"";position:absolute;left:-30%;bottom:-30%;width:75%;aspect-ratio:1;background:var(--orange);border-radius:50%}
-.post-img svg{width:58%;position:relative;stroke:#fff;fill:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
-.post-bar{display:flex;gap:16px;padding-top:12px;align-items:center}
-.post-bar svg{width:26px;height:26px;stroke:var(--navy);fill:none;stroke-width:1.7;cursor:pointer;padding:4px;box-sizing:content-box}
-.post-bar svg *{pointer-events:none}
-.post-bar .heart{fill:var(--orange);stroke:var(--orange);transition:transform .2s}
-.post-bar .heart:active{transform:scale(1.4)}
-.post-bar .save{margin-left:auto}
-.wristband{position:relative;margin:-14px -22px 0;background:var(--teal);color:#fff;font-family:var(--head);font-weight:700;letter-spacing:.14em;text-align:center;padding:14px 20px;border-radius:12px;box-shadow:0 12px 24px -10px rgba(0,0,0,.4);transform:rotate(-3deg);font-size:1.1rem;background-image:repeating-linear-gradient(45deg,transparent 0 10px,rgba(255,255,255,.04) 10px 20px)}
-.wristband::after{content:"";position:absolute;right:0;top:0;bottom:0;width:70px;border-radius:0 12px 12px 0;background:repeating-linear-gradient(45deg,var(--orange) 0 8px,var(--navy) 8px 16px)}
+.marquee{overflow:hidden;border-block:1px solid var(--line);padding-block:14px}
+.track{display:flex;width:max-content;will-change:transform}
+.track span{position:relative;padding-inline:.9em;white-space:nowrap;font:600 clamp(1.4rem,3.2vw,2.4rem)/1.2 var(--f-display);letter-spacing:-.01em}
+.track span::after{content:"";position:absolute;right:-.14em;top:50%;width:.26em;height:.26em;background:var(--cobalt);transform:translateY(-50%) rotate(45deg)}
 
 /* STATS */
-.stats{background:var(--navy);color:#fff;padding:54px 0}
-.stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center}
-.stat b{display:block;font-family:var(--display);font-weight:400;font-size:clamp(3rem,6vw,4.6rem);color:var(--orange);line-height:1}
-.stat span{font-family:var(--head);letter-spacing:.12em;text-transform:uppercase;font-size:.78rem;color:#c8d4de}
+.stats{background:var(--band);color:var(--on-band);padding-block:clamp(44px,6vw,72px)}
+.stat-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px 24px}
+.stat b{display:block;font:700 clamp(2.8rem,4.5vw,5.2rem)/1 var(--f-display);font-variation-settings:'wdth' 90;letter-spacing:-.03em;color:var(--hl);font-variant-numeric:tabular-nums}
+.stat span{display:block;margin-top:10px;max-width:16ch;font-size:.80rem;line-height:1.35}
 
-/* SOCIAL MEDIA SECTION */
-#social{background:var(--cream)}
-.sec-head{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:end;margin-bottom:56px}
-.tagline{font-family:var(--head);font-weight:600;color:var(--navy);font-size:1.15rem;line-height:1.35;border-left:2px solid var(--orange);padding-left:22px}
-.tagline p{font-family:var(--body);font-weight:400;font-size:.98rem;color:var(--muted);margin-top:12px}
+/* IMAGE SHOTS */
+.shot{position:relative;aspect-ratio:4/3;max-width:100%;overflow:hidden;border-radius:4px;background:var(--sunk);isolation:isolate}
+.shot::before{content:attr(data-label);position:absolute;inset:0;display:grid;place-items:center;padding:16px;text-align:center;font:700 clamp(1.4rem,3vw,2.3rem)/1.05 var(--f-display);letter-spacing:-.02em;color:var(--ink-2);background:repeating-linear-gradient(135deg,transparent 0 14px,var(--line) 14px 15px)}
+.shot img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;object-position:center;padding:0;z-index:1}
+.shot img.bad{display:none}
+.metric{position:absolute;left:12px;bottom:12px;z-index:2;background:var(--hl);color:var(--on-hl);font-weight:600;font-size:.88rem;line-height:1.2;padding:7px 12px;border-radius:2px;max-width:calc(100% - 24px)}
+[data-tilt]{transform-style:preserve-3d}
 
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
-.card{background:#fffdf9;border:1.5px solid var(--c);border-radius:12px;overflow:hidden;display:flex;flex-direction:column;transition:transform .35s ease,box-shadow .35s ease}
-.card:hover{transform:translateY(-8px);box-shadow:0 20px 36px -16px rgba(14,34,56,.3)}
-.card header{background:var(--c);color:#fff;text-align:center;font-family:var(--head);font-weight:600;letter-spacing:.08em;font-size:1.15rem;padding:14px 8px;text-transform:uppercase}
+/* CASE FILES */
+.stack{display:grid;gap:24px}
+.case{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(24px,4vw,56px);padding:clamp(20px,3.2vw,44px);border-radius:10px;background:var(--card);border:1px solid var(--line)}
+.case:nth-child(2){background:var(--sunk)}
+.case.band{--ink:#fff;--ink-2:#dbe0ff;--line:rgba(255,255,255,.3);--cobalt:#fff;background:var(--band);color:var(--on-band);border-color:transparent}
+.case h3{font:700 clamp(2rem,4.2vw,3.4rem)/1 var(--f-display);font-variation-settings:'wdth' 88;letter-spacing:-.025em}
+.case dl{margin-top:24px}
+.case dl div{display:grid;grid-template-columns:5.6rem minmax(0,1fr);gap:12px;padding:12px 0;border-top:1px solid var(--line)}
+.case dt{font-weight:600;color:var(--cobalt)}
+.case dd{color:var(--ink)}
+.case .shot{align-self:center;background:var(--card)}
+.case.band .shot{background:rgba(255,255,255,.08)}
+@media (min-width:900px) and (min-height:760px){
+  .case{position:sticky;top:calc(76px + env(safe-area-inset-top,0px) + var(--n)*16px)}
+}
 
-.card .shot{height:220px;margin:16px;border-radius:8px;background:#0b0e12;position:relative;overflow:hidden;display:grid;place-items:center;color:#fff}
-.card .shot img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
-.card:hover .shot img{transform:scale(1.05)}
-
-.rows{margin-top:auto;padding:8px 0;display:flex;flex-direction:column;gap:8px}
-.rows div{padding:12px 18px;font-size:.92rem;color:#26384a;line-height:1.45}
-.rows div b{color:var(--c);font-family:var(--head);letter-spacing:.06em;text-transform:uppercase;font-size:.82rem;display:inline-block;margin-bottom:4px;background:rgba(0,0,0,.04);padding:2px 8px;border-radius:4px}
-
-/* HOBBIES AND OTHER CREATIVES SECTION */
-#creatives{background:var(--cream-2)}
-.creatives-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:32px;margin-top:40px;align-items:start}
-.creative-card{background:#fffdf9;border:1.5px solid #e4d9c8;border-radius:14px;overflow:hidden;display:flex;flex-direction:column;transition:transform .35s,box-shadow .35s}
-.creative-card:hover{transform:translateY(-8px);box-shadow:0 22px 40px -20px rgba(14,34,56,.35)}
-
-/* Expandable poster shot styling */
-.creative-shot{position:relative;overflow:hidden;background:#1a232a;display:grid;place-items:center;height:340px;transition:height .5s ease}
-.creative-shot.poster-shot{background:#e2ebdc;cursor:pointer}
-.creative-shot.poster-shot.expanded{height:750px}
-.creative-shot img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
-.creative-shot.poster-shot img{object-fit:contain;padding:12px}
-.creative-card:hover .creative-shot img{transform:scale(1.03)}
-
-/* Expand / Collapse Tag Badge */
-.expand-badge{position:absolute;bottom:12px;right:12px;background:var(--navy);color:#fff;font-family:var(--head);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;padding:6px 12px;border-radius:20px;z-index:4;box-shadow:0 4px 10px rgba(0,0,0,.2);transition:background .3s}
-.creative-shot.poster-shot:hover .expand-badge{background:var(--orange)}
-
-.creative-body{padding:26px;display:flex;flex-direction:column;gap:10px;flex:1}
-.creative-body h3{font-family:var(--head);font-weight:700;color:var(--navy);text-transform:uppercase;font-size:1.5rem;line-height:1.2}
-.creative-role{display:inline-block;font-family:var(--head);font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;color:var(--orange);font-weight:600;background:rgba(232,100,60,.1);padding:4px 12px;border-radius:20px;align-self:flex-start}
-.creative-body p{color:var(--muted);font-size:.96rem;line-height:1.5}
+/* CREATIVES */
+#creatives{background:var(--sunk)}
+.pieces{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(24px,4vw,56px);align-items:start}
+.poster{height:340px;aspect-ratio:auto;transition:height .55s cubic-bezier(.2,.8,.2,1)}
+.poster.open{height:min(760px,125vw)}
+.poster img{object-fit:contain;padding:12px}
+.piece .shot{aspect-ratio:auto;height:340px}
+.toggle{margin-top:12px;background:none;border:1px solid var(--ink);border-radius:2px;padding:8px 14px;cursor:pointer;font-weight:500;font-size:.9rem}
+.tag{display:inline-block;margin-top:22px;padding:4px 10px;border:1px solid var(--cobalt);color:var(--cobalt);border-radius:2px;font-size:.86rem;font-weight:600}
+.piece h3{margin-top:12px;font:700 clamp(1.5rem,2.6vw,2rem)/1.1 var(--f-display);letter-spacing:-.02em;text-wrap:balance}
+.piece p{margin-top:10px;color:var(--ink-2);max-width:52ch}
 
 /* EVENTS */
-#events{background:var(--cream);overflow:hidden}
-#events::before{content:"";position:absolute;left:-120px;top:120px;width:300px;height:300px;border-radius:50%;background:var(--orange);opacity:.9;box-shadow:0 0 0 22px rgba(232,100,60,.0),inset 0 0 0 28px rgba(255,255,255,.08)}
-#events .wrap{position:relative}
-.event{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;margin-top:64px}
-.event.rev .ev-media{order:2}
-.ev-media{aspect-ratio:4/3;border-radius:26px;position:relative;overflow:hidden;box-shadow:0 30px 50px -28px rgba(14,34,56,.7)}
-.ev-media img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
-.ev-media:hover img{transform:scale(1.05)}
-.ev-badge{position:absolute;left:18px;bottom:18px;background:rgba(14,34,56,.88);color:#fff;font-family:var(--head);letter-spacing:.14em;font-size:.78rem;padding:8px 14px;border-radius:30px;text-transform:uppercase;z-index:2}
-.ev h3{font-family:var(--head);font-weight:700;color:var(--orange);text-transform:uppercase;font-size:clamp(1.8rem,3.6vw,2.4rem);letter-spacing:.02em;line-height:1.1;padding-bottom:12px;border-bottom:2px solid var(--navy);margin-bottom:20px}
-.ev h4{font-family:var(--head);color:var(--teal);text-transform:uppercase;letter-spacing:.04em;font-size:1rem;margin-top:16px}
-.ev p{color:var(--teal);font-family:var(--head);font-weight:600;text-transform:uppercase;font-size:1.02rem;line-height:1.35;margin-top:4px}
-.ev .role{color:var(--navy)}
+.event{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:clamp(24px,5vw,72px);align-items:center}
+.event+.event{margin-top:clamp(48px,7vw,96px)}
+.event.rev .shot-wrap{order:2}
+.event h3{font:700 clamp(2rem,4vw,3rem)/1 var(--f-display);font-variation-settings:'wdth' 88;letter-spacing:-.025em}
+.event .sub{margin-top:8px;color:var(--ink-2);font-size:1.05rem}
+.event .role{display:inline-block;margin-top:18px;font-weight:600;border-bottom:2px solid var(--cobalt)}
+.event p.body{margin-top:16px;max-width:46ch}
+.event p.body+p.body{margin-top:10px}
 
 /* EXPERIENCE */
-#experience{background:var(--cream-2)}
-.tl{position:relative;margin-top:56px}
-.tl::before{content:"";position:absolute;left:21px;top:6px;bottom:6px;width:3px;border-radius:3px;background:linear-gradient(var(--teal),var(--orange))}
-.tl-item{position:relative;display:grid;grid-template-columns:44px 1fr;gap:26px;margin-bottom:26px}
-.tl-ico{width:44px;height:44px;border-radius:50%;background:var(--c);display:grid;place-items:center;position:relative;z-index:1;box-shadow:0 0 0 6px var(--cream-2);transition:transform .4s}
-.tl-ico svg{width:22px;height:22px;stroke:#fff;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
-.tl-card{background:#fffdf9;border:1.5px solid #e4d9c8;border-left:5px solid var(--c);border-radius:10px;padding:24px 28px;transition:transform .3s,box-shadow .3s}
-.tl-item:hover .tl-card{transform:translateX(8px);box-shadow:0 22px 36px -24px rgba(14,34,56,.55)}
-.tl-item:hover .tl-ico{transform:rotate(-12deg) scale(1.18)}
-.tl-meta{font-family:var(--head);letter-spacing:.14em;font-size:.76rem;text-transform:uppercase;color:var(--c);font-weight:600}
-.tl-card h3{font-family:var(--head);font-weight:700;text-transform:uppercase;color:var(--navy);font-size:1.45rem;line-height:1.15;margin-top:4px}
-.tl-card h4{font-family:var(--body);font-weight:500;color:var(--teal);font-size:1rem;margin:2px 0 12px}
-.tl-card ul{list-style:none;display:flex;flex-direction:column;gap:8px}
-.tl-card li{position:relative;padding-left:20px;color:#33475a;font-size:.96rem}
-.tl-card li::before{content:"";position:absolute;left:2px;top:.6em;width:8px;height:8px;border-radius:2px;background:var(--c);transform:rotate(45deg)}
+#experience{background:var(--card);border-block:1px solid var(--line)}
+.ledger{border-top:1px solid var(--ink)}
+.row{display:grid;grid-template-columns:minmax(0,13rem) minmax(0,1fr) minmax(0,1.5fr);gap:12px clamp(20px,4vw,56px);padding:28px 12px;border-bottom:1px solid var(--line);transition:background .25s}
+.row:hover{background:var(--sunk)}
+.row time{font-family:var(--f-mono);font-size:.88rem;color:var(--ink-2);padding-top:.35rem}
+.row h3{font:700 clamp(1.3rem,2.2vw,1.7rem)/1.1 var(--f-display);letter-spacing:-.02em}
+.row .org{margin-top:6px;color:var(--cobalt);font-weight:600}
+.row li{position:relative;padding-left:18px}
+.row li+li{margin-top:8px}
+.row li::before{content:"";position:absolute;left:0;top:.72em;width:8px;height:2px;background:var(--cobalt)}
 
 /* SKILLS */
-#skills{background:var(--cream)}
-.skill-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:48px}
-.sk{background:#fffdf9;border:1.5px solid #e4d9c8;border-radius:12px;padding:20px 18px;display:flex;gap:14px;align-items:center;transition:.3s}
-.sk svg{width:36px;height:36px;flex:none;stroke:var(--teal);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;transition:.35s}
-.sk span{font-weight:500;line-height:1.3;font-size:.95rem}
-.sk small{display:block;color:var(--muted);font-size:.78rem;font-weight:400;margin-top:2px;transition:color .3s}
-.sk:hover{background:var(--navy);color:#fff;border-color:var(--navy);transform:translateY(-6px)}
-.sk:hover svg{stroke:var(--orange);transform:rotate(-8deg) scale(1.2)}
-.sk:hover small{color:#b9c6d3}
-.panel{background:#fffdf9;border:1.5px solid #e4d9c8;border-radius:12px;padding:30px;margin-top:22px}
-.panel h3{font-family:var(--display);font-weight:400;font-size:2.2rem;color:var(--navy);line-height:1}
-.panel h3::after{content:"";display:block;width:44px;height:5px;background:var(--orange);margin:10px 0 20px;border-radius:2px}
-.two{display:grid;grid-template-columns:1fr 1fr;gap:22px}
-.edu b{display:block;font-family:var(--head);font-size:1.3rem;color:var(--navy);text-transform:uppercase;line-height:1.2}
-.edu span{display:block;color:var(--teal);font-weight:500;margin-top:4px}
-.edu em{display:block;font-style:normal;color:var(--muted);font-size:.9rem;margin-top:2px}
-.gpa{display:inline-flex;align-items:baseline;gap:8px;margin-top:18px;padding:8px 18px;border-radius:40px;background:var(--navy);color:#fff;font-family:var(--head);letter-spacing:.1em;font-size:.8rem;text-transform:uppercase}
-.gpa strong{font-family:var(--display);font-weight:400;font-size:1.7rem;color:var(--orange);letter-spacing:.04em}
-.lang{margin-bottom:18px}
-.lang:last-child{margin-bottom:0}
-.lang-top{display:flex;justify-content:space-between;font-size:.95rem;margin-bottom:6px}
-.lang-top b{font-family:var(--head);letter-spacing:.06em;text-transform:uppercase;color:var(--navy)}
-.lang-top span{color:var(--muted)}
-.meter{height:8px;border-radius:8px;background:var(--cream-2);overflow:hidden}
-.meter i{display:block;height:100%;width:0;border-radius:8px;background:linear-gradient(90deg,var(--teal),var(--orange));transition:width 1.3s cubic-bezier(.2,.8,.2,1) .3s}
-.rv.in .meter i{width:var(--w)}
-.lang-note{color:var(--muted);font-size:.82rem;margin-top:16px}
-.chip{display:inline-block;padding:8px 16px;border-radius:30px;border:1.5px solid var(--teal);color:var(--navy);font-size:.9rem;margin:4px 6px 4px 0;transition:.25s;cursor:default}
-.chip:hover{background:var(--teal);color:#fff;transform:translateY(-3px)}
-.certs{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px}
-.cert{display:flex;gap:14px;align-items:center;padding:16px;border:1.5px solid #e4d9c8;border-radius:10px;background:#fff;transition:.3s}
-.cert svg{width:34px;height:34px;flex:none;stroke:var(--orange);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;transition:transform .35s}
-.cert b{display:block;font-size:.92rem;line-height:1.3;color:var(--navy)}
-.cert small{color:var(--muted);font-size:.78rem}
-.cert:hover{border-color:var(--orange);transform:translateY(-4px);box-shadow:0 18px 28px -20px rgba(14,34,56,.6)}
-.cert:hover svg{transform:rotate(15deg) scale(1.2)}
+.skills-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(32px,6vw,88px);align-items:start}
+.skill-list li{padding:20px 0;border-top:1px solid var(--line)}
+.skill-list li:last-child{border-bottom:1px solid var(--line)}
+.skill-list strong{display:block;font:600 1.3rem/1.2 var(--f-display);letter-spacing:-.015em}
+.skill-list span{display:block;margin-top:4px;color:var(--ink-2)}
+.block+.block{margin-top:40px}
+.block h3{font:700 1.5rem/1 var(--f-display);letter-spacing:-.02em;margin-bottom:16px}
+.edu-name{font-weight:600;font-size:1.1rem}
+.edu-sub{color:var(--ink-2);margin-top:2px}
+.gpa{display:flex;align-items:baseline;gap:14px;margin-top:16px}
+.gpa b{font:700 3.4rem/1 var(--f-display);letter-spacing:-.03em;background:linear-gradient(transparent 62%,var(--hl) 62% 94%,transparent 94%);color:var(--ink);padding:0 .08em;font-variant-numeric:tabular-nums}
+.gpa span{color:var(--ink-2)}
+.lang{margin-bottom:16px}
+.lang-top{display:flex;justify-content:space-between;gap:12px;margin-bottom:6px;font-weight:500}
+.lang-top span{color:var(--ink-2);font-weight:400}
+.meter{height:6px;border-radius:2px;background:var(--sunk);overflow:hidden}
+.meter i{display:block;height:100%;width:var(--w);background:var(--cobalt);transform-origin:left}
+.note{color:var(--ink-2);font-size:.88rem;margin-top:4px}
+.soft{display:flex;flex-wrap:wrap;gap:8px}
+.soft li{border:1px solid var(--line);padding:6px 12px;border-radius:2px;font-size:.92rem}
+.certs{margin-top:clamp(40px,6vw,72px)}
+.certs ul{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,280px),1fr));gap:0 32px}
+.certs li{padding:16px 0;border-top:1px solid var(--line)}
+.certs b{display:block;font-weight:600;line-height:1.3}
+.certs small{color:var(--ink-2);font-size:.86rem}
 
 /* PROCESS */
-#work{background:var(--cream-2)}
-.work-top{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
-.notebook{background:#fcfaf5;border-radius:10px;padding:34px 30px;box-shadow:0 26px 40px -24px rgba(14,34,56,.5);transform:rotate(3deg);position:relative;max-width:420px;margin-inline:auto;border-left:14px dotted #bbb}
-.notebook ol{list-style:none;display:flex;flex-direction:column;gap:14px;font-family:'Oswald',sans-serif;text-align:center}
-.notebook li{border:2px solid var(--teal);padding:8px;border-radius:4px;color:var(--navy);letter-spacing:.06em;font-weight:500;position:relative}
-.notebook li:nth-child(even){border-color:var(--orange)}
-.notebook li:not(:last-child)::after{content:"↓";position:absolute;left:50%;bottom:-20px;transform:translateX(-50%);color:var(--navy);font-size:.9rem}
-.notebook li:first-child{border:0;font-size:1.3rem}
-.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:70px}
-.step{padding:6px 4px;border-top:3px solid var(--c);padding-top:20px;transition:transform .3s}
-.step:hover{transform:translateY(-6px)}
-.step .n{display:inline-grid;place-items:center;width:52px;height:52px;border-radius:50%;background:var(--c);color:#fff;font-family:var(--display);font-size:1.7rem;margin-right:10px;vertical-align:middle}
-.step h3{display:inline;vertical-align:middle;font-family:var(--display);font-weight:400;color:var(--c);font-size:2.2rem;letter-spacing:.02em}
-.step p{margin-top:12px;color:var(--muted)}
-.caps{margin-top:70px;display:grid;grid-template-columns:240px 1fr;background:#fffdf9;border:1.5px solid var(--teal);border-radius:6px;overflow:hidden}
-.caps .mega{background:var(--orange);display:grid;place-items:center;padding:30px}
-.caps .mega svg{width:130px;stroke:#fff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-.caps-in{padding:34px}
-.caps-in h3{font-family:var(--display);font-weight:400;font-size:2.8rem;color:var(--navy);line-height:1}
-.caps-in .bar{width:50px;height:5px;margin:10px 0 26px}
-.cap-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}
-.cap{text-align:center;padding:10px 8px;border-radius:10px;transition:.25s}
-.cap:hover{background:var(--cream);transform:translateY(-4px)}
-.cap svg{width:44px;height:44px;margin:0 auto 8px;stroke:var(--navy);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
-.cap:nth-child(2) svg{stroke:var(--teal)}
-.cap:nth-child(3) svg{stroke:var(--orange)}
-.cap span{font-size:.92rem;font-weight:500}
+#process{background:var(--sunk)}
+.flow{display:flex;flex-wrap:wrap;gap:8px 0;margin-top:28px;font-family:var(--f-mono);font-size:.88rem}
+.flow li{display:flex;align-items:center}
+.flow li+li::before{content:"";width:28px;height:1px;background:var(--ink);margin-inline:10px}
+.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;margin-top:clamp(40px,6vw,72px)}
+.step{border-top:2px solid var(--ink);padding-top:16px}
+.step b{display:block;font:700 1rem/1 var(--f-mono);color:var(--cobalt)}
+.step h3{margin-top:14px;font:700 clamp(1.8rem,3vw,2.4rem)/1 var(--f-display);letter-spacing:-.025em}
+.step p{margin-top:8px;color:var(--ink-2)}
+#process .marquee{margin-top:clamp(44px,6vw,80px);border-color:var(--ink)}
+#process .track span{color:var(--cobalt)}
 
 /* CONTACT */
-#connect{background:var(--navy);color:#fff;overflow:hidden}
-#connect::after{content:"";position:absolute;right:-140px;bottom:-140px;width:420px;height:420px;background:var(--orange);transform:rotate(30deg)}
-.con{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center;position:relative;z-index:1}
-#connect h2.title{color:#fff}
-.list{list-style:none;margin-top:30px;display:flex;flex-direction:column;gap:16px}
-.list a,.list li>span{display:flex;align-items:center;gap:16px;text-decoration:none;font-size:1.08rem;transition:.25s}
-.list a:hover{transform:translateX(6px);color:var(--orange)}
-.list i{width:50px;height:50px;border-radius:50%;background:var(--teal);display:grid;place-items:center;flex:none}
-.list svg{width:24px;height:24px;stroke:#fff;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
-.closing{margin-top:34px;border-left:4px solid var(--orange);padding:6px 0 6px 18px;font-family:var(--head);font-weight:600;text-transform:uppercase;color:var(--orange);letter-spacing:.04em;line-height:1.35}
-.pass{max-width:300px;margin-inline:auto;background:#e9f3f3;border:6px solid #fff3;border-radius:20px;padding:18px;transform:rotate(8deg);box-shadow:0 30px 50px -20px #000a;transition:transform .5s}
-.pass:hover{transform:rotate(0)}
-.pass::before{content:"";display:block;width:60px;height:12px;border-radius:8px;background:var(--orange);margin:0 auto 14px}
-.pass-in{background:var(--teal);border-radius:12px;padding:30px 20px 0;text-align:center;overflow:hidden}
-.pass-in h4{font-family:var(--head);font-weight:700;font-size:2.8rem;line-height:1;letter-spacing:.04em;color:#fff}
-.pass-in hr{width:60px;border:0;height:2px;background:#fff8;margin:14px auto}
-.pass-in .ph{height:70px;background:#f7f3ea;border-radius:8px;color:var(--navy);display:grid;place-items:center;font-family:var(--head);font-weight:600;letter-spacing:.06em}
-.pass-in .stripe{height:40px;margin:26px -20px 0;background:repeating-linear-gradient(45deg,var(--navy) 0 10px,var(--teal) 10px 20px)}
-footer{background:#08162a;color:#9db0c2;text-align:center;font-family:var(--head);letter-spacing:.16em;text-transform:uppercase;font-size:.72rem;padding:22px 10px}
+#contact{background:var(--band);color:var(--on-band);overflow:hidden;--ink:#fff;--ink-2:#dbe0ff;--line:rgba(255,255,255,.3);--focus:#ffe24a}
+#contact h2{font-size:clamp(3rem,10vw,8rem);line-height:.9}
+.mail{display:inline-block;margin-top:32px;font:600 clamp(1.4rem,4.6vw,3.2rem)/1.1 var(--f-display);letter-spacing:-.025em;text-decoration-thickness:3px;text-underline-offset:8px;overflow-wrap:anywhere}
+.copy{margin-left:12px;vertical-align:middle;background:transparent;border:1.5px solid var(--on-band);color:var(--on-band);border-radius:2px;padding:6px 12px;cursor:pointer;font-weight:500;font-size:.88rem}
+.reach{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 32px;margin-top:40px}
+.reach li{padding:16px 0;border-top:1px solid var(--line)}
+.reach small{display:block;color:var(--ink-2);margin-bottom:2px}
+.reach a,.reach span.v{font-weight:600;font-size:1.1rem;overflow-wrap:anywhere}
+.closing{margin-top:44px;max-width:34ch;font:600 clamp(1.4rem,2.6vw,2rem)/1.2 var(--f-display);letter-spacing:-.015em;text-wrap:balance}
+.closing mark{padding:0 .15em}
+footer{padding:22px 0;color:var(--ink-2);font-size:.88rem;border-top:1px solid var(--line)}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 
-/* HOVER ICONS */
-.hov{position:absolute;top:12px;right:12px;z-index:3;width:44px;height:44px;border-radius:50%;background:var(--orange);display:grid;place-items:center;opacity:0;transform:scale(.5) rotate(-25deg);transition:.35s cubic-bezier(.3,1.6,.5,1);box-shadow:0 8px 18px -6px rgba(0,0,0,.5)}
-.hov svg{width:22px;height:22px;stroke:#fff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-.hov::after{content:attr(data-label);position:absolute;right:54px;top:50%;transform:translateY(-50%);white-space:nowrap;background:rgba(14,34,56,.92);color:#fff;font-family:var(--head);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;padding:6px 12px;border-radius:30px}
-.shot:hover .hov,.creative-shot:hover .hov,.ev-media:hover .hov{opacity:1;transform:none}
-
-/* REVEAL & RESPONSIVE */
-.rv{opacity:0;transform:translateY(34px);transition:opacity .8s ease,transform .8s ease}
-.rv.in{opacity:1;transform:none}
-.d1{transition-delay:.12s}.d2{transition-delay:.24s}.d3{transition-delay:.36s}
-
-@media(max-width:960px){
-  .hero,.sec-head,.work-top,.con,.event{grid-template-columns:1fr}
-  .event.rev .ev-media{order:0}
-  .cards,.creatives-grid{grid-template-columns:1fr;max-width:480px;margin-inline:auto}
-  .stat-grid{grid-template-columns:repeat(2,1fr);gap:34px}
-  .steps{grid-template-columns:repeat(2,1fr)}
-  .caps{grid-template-columns:1fr}
-  .caps .mega{padding:20px}
-  .caps .mega svg{width:80px}
-  .cap-grid{grid-template-columns:repeat(3,1fr)}
-  .hero .frame{margin-top:30px}
-  section{padding:72px 0}
-  .skill-grid{grid-template-columns:1fr}
+@media (max-width:960px){
+  .sec-head,.hero-foot,.case,.event,.skills-grid,.pieces{grid-template-columns:minmax(0,1fr)}
+  .sec-head .lead{justify-self:start}
+  .event.rev .shot-wrap{order:0}
+  .stat-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .steps{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .row{grid-template-columns:minmax(0,1fr)}
+  .row time{padding-top:0}
+  .reach{grid-template-columns:minmax(0,1fr)}
 }
-@media(max-width:900px){
-  .burger{display:block}
-  .links{position:absolute;top:60px;left:0;right:0;background:var(--navy);flex-direction:column;gap:0;max-height:0;overflow:hidden;transition:max-height .4s}
-  .links.open{max-height:420px}
-  .links a{display:block;padding:14px 6%;border:0;border-top:1px solid #ffffff14}
+@media (max-width:860px){
+  .menu-btn{display:block}
+  .links{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;background:var(--paper);border-bottom:1px solid var(--line);padding:8px max(16px,env(safe-area-inset-left,0px)) 12px}
+  .nav.open .links{display:flex}
+  .links a{padding:14px 0;border-top:1px solid var(--line)}
 }
-@media(max-width:480px){
-  .steps{grid-template-columns:1fr}
-  .cap-grid{grid-template-columns:repeat(2,1fr)}
-  .stat-grid{gap:26px 10px}
-  .pills{gap:18px}
-  .creative-shot.poster-shot.expanded{height:520px}
+@media (max-width:520px){
+  .steps{grid-template-columns:minmax(0,1fr)}
+  .facts div{grid-template-columns:minmax(0,1fr);gap:2px}
+  .case dl div{grid-template-columns:minmax(0,1fr);gap:2px}
+  .copy{margin-left:0;margin-top:10px;display:block}
+}
+@media (prefers-reduced-motion:reduce){
+  .poster{transition:none}
+  html{scroll-behavior:auto}
 }
 </style>
-</head>
-<body>
 
-<nav id="nav">
-  <div class="wrap nav-in">
-    <a href="#profile" class="logo">Lai Jia Hao <span>/</span> Portfolio</a>
-    <button class="burger" id="burger" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
-    <ul class="links" id="links">
-      <li><a href="#profile">Profile</a></li>
-      <li><a href="#social">Social Media</a></li>
-      <li><a href="#creatives">Creatives</a></li>
-      <li><a href="#events">Events</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#work">How I Work</a></li>
-      <li><a href="#connect">Connect</a></li>
-    </ul>
-  </div>
-  <div class="progress" id="progress"></div>
-</nav>
-
-<!-- 01 PROFILE -->
-<section id="profile">
-  <div class="wrap hero">
-    <div>
-      <div class="eyebrow rv"><b>01</b> Social Media &amp; Event Portfolio</div>
-      <h1 class="rv d1">Profile</h1>
-      <div class="bar rv d1"></div>
-      <div class="name rv d2">Lai Jia Hao</div>
-      <p class="rv d2">Sunway University marketing student with a knack for turning big ideas into successful campaigns.</p>
-      <p class="rv d3">Experienced in coordinating live events for <strong>160+ participants</strong>, designing visual brand identities, and building social content from scratch.</p>
-      <div class="pills rv d3">
-        <div class="pill"><i style="background:var(--teal)"><svg viewBox="0 0 24 24"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></svg></i>Event Logistics<br>&amp; Operations</div>
-        <div class="pill"><i style="background:var(--orange)"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3"/><circle cx="5" cy="10" r="2"/><circle cx="19" cy="10" r="2"/><path d="M6 20c0-3.3 2.7-6 6-6s6 2.7 6 6M1.5 18c0-2 1.5-3.5 3.5-3.5M22.5 18c0-2-1.5-3.5-3.5-3.5"/></svg></i>Social Media<br>Strategy &amp; Design</div>
-      </div>
-      <div class="cta rv d3">
-        <a class="btn solid" href="#social">View My Work</a>
-        <a class="btn ghost" href="#connect">Get In Touch</a>
-      </div>
-    </div>
-    <div class="frame rv d2" aria-hidden="true">
-      <div class="post">
-        <div class="post-top"><span class="dot"></span><span class="dots">•••</span></div>
-        <div class="post-img">
-          <svg viewBox="0 0 100 100"><path d="M18 42l36-18v52L18 58zM18 42v16M54 28l12-6v60l-12-6M30 62l4 14h8l-3-12M70 34l8-6M72 50h10M70 66l8 6"/></svg>
-        </div>
-        <div class="post-bar">
-          <svg class="heart" id="heart" viewBox="0 0 24 24"><path d="M12 21s-8-5.2-8-11a4.5 4.5 0 018-2.8A4.5 4.5 0 0120 10c0 5.8-8 11-8 11z"/></svg>
-          <svg viewBox="0 0 24 24"><path d="M21 12a8 8 0 01-11.7 7L3 21l2-5.7A8 8 0 1121 12z"/></svg>
-          <svg viewBox="0 0 24 24"><path d="M22 3L2 11l7 3 3 7zM22 3L9 14"/></svg>
-          <svg class="save" viewBox="0 0 24 24"><path d="M6 3h12v18l-6-4-6 4z"/></svg>
-        </div>
-      </div>
-      <div class="wristband">★ EVENT ACCESS ★</div>
-    </div>
-  </div>
-</section>
-
-<!-- STATS -->
-<div class="stats">
-  <div class="wrap stat-grid">
-    <div class="stat rv"><b data-count="160" data-suffix="+">0</b><span>Delegates Coordinated</span></div>
-    <div class="stat rv d1"><b data-count="60" data-suffix="%">0</b><span>Profile Traffic Growth</span></div>
-    <div class="stat rv d2"><b data-count="20" data-suffix="+">0</b><span>Large-Scale Events Managed</span></div>
-    <div class="stat rv d3"><b data-from="10" data-count="15" data-prefix="10–" data-suffix="%">0</b><span>Catering Cost Cut</span></div>
-  </div>
-</div>
-
-<!-- 02 SOCIAL MEDIA -->
-<section id="social">
+<header class="nav" id="nav">
   <div class="wrap">
-    <div class="sec-head">
-      <div>
-        <div class="eyebrow rv"><b>02</b> Selected Work</div>
-        <h2 class="title rv d1">Social Media<br>Campaigns</h2>
+    <a class="brand" href="#top">Lai Jia Hao</a>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="links">Menu</button>
+    <nav aria-label="Sections">
+      <ul class="links" id="links">
+        <li><a href="#work">Work</a></li>
+        <li><a href="#creatives">Creatives</a></li>
+        <li><a href="#events">Events</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#process">Process</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="bar" id="bar"></div>
+</header>
+
+<main id="top">
+  <section class="hero" aria-labelledby="name">
+    <div class="wrap">
+      <div class="hero-meta">
+        <span>Lai Jia Hao's Portfolio</span>
+        <span class="clock" id="clock" aria-label="Local time in Malaysia">MYT --:--</span>
       </div>
-      <div class="tagline rv d2">
-        Strategic content. Creative execution. Meaningful engagement.
-        <p>A selection of social media campaigns I've conceived, created and managed from idea to impact.</p>
+      <h1 class="name" id="name"><span class="line">Lai Jia Hao</span></h1>
+      <div class="hero-foot">
+        <div>
+          <p>Sunway University marketing student with a knack for turning big ideas into successful campaigns.</p>
+          <p>Experienced in coordinating live events for <mark>160+ participants</mark>, designing visual brand identities, and building social content from scratch.</p>
+          <div class="cta">
+            <a class="btn magnet" href="#work">View My Work</a>
+            <a class="btn ghost magnet" href="#contact">Get In Touch</a>
+          </div>
+        </div>
+        <dl class="facts">
+          <div><dt>Studying</dt><dd>BSc (Hons) Marketing, Sunway University</dd></div>
+          <div><dt>Focus</dt><dd>Social media strategy and design, event logistics and operations</dd></div>
+          <div><dt>Languages</dt><dd>English, Chinese, Malay</dd></div>
+        </dl>
       </div>
     </div>
+  </section>
 
-    <div class="cards">
-      <!-- Card 1: ENC Sunway -->
-      <article class="card rv" style="--c:var(--orange)">
-        <header>ENCSunway</header>
-        <div class="shot s1">
-          <div class="hov" data-label="+60% profile traffic"><svg viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8M15 7h6v6"/></svg></div>
-          <img src="ENC.jpg" alt="ENC Sunway Campaign">
-        </div>
-        <div class="rows">
-          <div><b>Objective</b>Build brand awareness and drive weekly youth community engagement on campus.</div>
-          <div><b>Role</b>Digital content lead responsible for visual copywriting, post layout, and publishing schedules.</div>
-          <div><b>Result</b>Increased profile traffic by 60% and established a consistent visual brand identity across posts.</div>
-        </div>
-      </article>
+  <div class="marquee" aria-hidden="true" data-marquee="1">
+    <div class="track"><span>Social Media Strategy</span><span>Content Design</span><span>Live Events</span><span>Event Logistics</span><span>Copywriting</span><span>Market Research</span></div>
+  </div>
 
-      <!-- Card 2: UNITE Conference -->
-      <article class="card rv d1" style="--c:var(--teal)">
-        <header>UNITE Conference</header>
-        <div class="shot s2">
-          <div class="hov" data-label="Merch slots sold out"><svg viewBox="0 0 24 24"><path d="M6 8h12l1 12H5zM9 8a3 3 0 016 0"/></svg></div>
-          <img src="Unite Promo.jpeg" alt="UNITE Conference Social Media Promo">
-        </div>
-        <div class="rows">
-          <div><b>Objective</b>Drive ticket sales and merchandise pre-orders for a regional youth summit.</div>
-          <div><b>Role</b>Creative strategist for promotional graphics.</div>
-          <div><b>Result</b>Generated high engagement across youth networks and contributed to selling out conference merchandise slots.</div>
-        </div>
-      </article>
-
-      <!-- Card 3: BB8PJ -->
-      <article class="card rv d2" style="--c:var(--navy)">
-        <header>BB8PJ</header>
-        <div class="shot s3">
-          <div class="hov" data-label="Link-in-bio routing"><svg viewBox="0 0 24 24"><path d="M10 14a4 4 0 005.7 0l3-3a4 4 0 00-5.7-5.7l-1 1M14 10a4 4 0 00-5.7 0l-3 3a4 4 0 005.7 5.7l1-1"/></svg></div>
-          <img src="BB8PJ.jpg" alt="BB8PJ Instagram Campaign">
-        </div>
-        <div class="rows">
-          <div><b>Objective</b>Establish and scale the organization's official Instagram presence from the ground up.</div>
-          <div><b>Role</b>Spearheaded the Instagram page, leading content strategy, visual direction, and post execution.</div>
-          <div><b>Result</b>Built a cohesive visual brand, centralized inquiry routing via link-in-bio, and boosted profile engagement.</div>
-        </div>
-      </article>
+  <div class="stats">
+    <div class="wrap stat-grid">
+      <div class="stat"><b data-count="160" data-suffix="+">160+</b><span>Delegates Coordinated</span></div>
+      <div class="stat"><b data-count="60" data-suffix="%">60%</b><span>Profile Traffic Growth</span></div>
+      <div class="stat"><b data-count="20" data-suffix="+">20+</b><span>Large-scale Events Managed</span></div>
+      <div class="stat"><b data-from="10" data-count="15" data-prefix="10 – " data-suffix= " %">10–15%</b><span>Catering Cost Cut</span></div>
     </div>
   </div>
-</section>
 
-<!-- 03 HOBBIES AND OTHER CREATIVES -->
-<section id="creatives">
-  <div class="wrap">
-    <div class="eyebrow rv"><b>03</b> Exploration</div>
-    <h2 class="title rv d1">Hobbies &amp; Other<br>Creatives</h2>
-    <div class="bar rv d1"></div>
+  <section id="work">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 data-rise>Social Media Campaigns</h2>
+        <p class="lead" data-rise><strong>Strategic content. Creative execution. Meaningful engagement.</strong>A selection of social media campaigns I've conceived, created and managed from idea to impact.</p>
+      </div>
+      <div class="stack">
+        <article class="case" style="--n:0">
+          <div>
+            <h3>ENCSunway</h3>
+            <dl>
+              <div><dt>Objective</dt><dd>Build brand awareness and drive weekly youth community engagement on campus.</dd></div>
+              <div><dt>Role</dt><dd>Digital content lead responsible for visual copywriting, post layout, and publishing schedules.</dd></div>
+              <div><dt>Result</dt><dd>Increased profile traffic by 60% and established a consistent visual brand identity across posts.</dd></div>
+            </dl>
+          </div>
+          <div class="shot" data-label="ENCSunway" data-tilt>
+            <img src="ENC.jpg" alt="ENC Sunway Campaign" loading="lazy">
+            <span class="metric">+60% profile traffic</span>
+          </div>
+        </article>
+        <article class="case" style="--n:1">
+          <div>
+            <h3>UNITE Conference</h3>
+            <dl>
+              <div><dt>Objective</dt><dd>Drive ticket sales and merchandise pre-orders for a regional youth summit.</dd></div>
+              <div><dt>Role</dt><dd>Creative strategist for promotional graphics.</dd></div>
+              <div><dt>Result</dt><dd>Generated high engagement across youth networks and contributed to selling out conference merchandise slots.</dd></div>
+            </dl>
+          </div>
+          <div class="shot" data-label="UNITE Conference" data-tilt>
+            <img src="Unite Promo.jpeg" alt="UNITE Conference Social Media Promo" loading="lazy">
+            <span class="metric">Merch slots sold out</span>
+          </div>
+        </article>
+        <article class="case band" style="--n:2">
+          <div>
+            <h3>BB8PJ</h3>
+            <dl>
+              <div><dt>Objective</dt><dd>Establish and scale the organization's official Instagram presence from the ground up.</dd></div>
+              <div><dt>Role</dt><dd>Spearheaded the Instagram page, leading content strategy, visual direction, and post execution.</dd></div>
+              <div><dt>Result</dt><dd>Built a cohesive visual brand, centralized inquiry routing via link-in-bio, and boosted profile engagement.</dd></div>
+            </dl>
+          </div>
+          <div class="shot" data-label="BB8PJ" data-tilt>
+            <img src="BB8PJ.jpg" alt="BB8PJ Instagram Campaign" loading="lazy">
+            <span class="metric">Link-in-bio routing</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
 
-    <div class="creatives-grid">
-      <!-- Creative Project 1: Mock Product Poster -->
-      <article class="creative-card rv d2">
-        <div class="creative-shot poster-shot" id="posterShot" title="Click to expand/collapse poster view">
-          <div class="hov" data-label="Research &amp; Graphic Design"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
-          <span class="expand-badge" id="expandBadge">Click to Expand</span>
-          <img src="Leafie Poster.jpeg" alt="Leafie Mock Product Poster">
-        </div>
-        <div class="creative-body">
-          <span class="creative-role">Lead Researcher &amp; Designer</span>
+  <section id="creatives">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 data-rise>Hobbies and Other Creatives</h2>
+      </div>
+      <div class="pieces">
+        <article class="piece">
+          <div class="shot poster" id="poster" data-label="Leafie">
+            <img src="Leafie Poster.jpeg" alt="Leafie Mock Product Poster" loading="lazy">
+          </div>
+          <span class="tag">Lead Researcher and Designer</span>
           <h3>Mock Product Poster ("Leafie")</h3>
-          <p>Conducted market research and designed an eco-friendly promotional poster for "Leafie" — a 100% biodegradable banana trunk fiber pad assignment. Focused on visual hierarchy, eco-branding, and product value communication.</p>
-        </div>
-      </article>
-
-      <!-- Creative Project 2: Consumer Behaviour Website -->
-      <article class="creative-card rv d3">
-        <div class="creative-shot">
-          <div class="hov" data-label="HTML · CSS · JS · Canva"><svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg></div>
-          <img src="Consumer Behavior Website.jpeg" alt="Senior Citizen Healthcare Market Website">
-        </div>
-        <div class="creative-body">
-          <span class="creative-role">Lead Developer</span>
+          <p>Conducted market research and designed an eco-friendly promotional poster for "Leafie", a 100% biodegradable banana trunk fiber pad assignment. Focused on visual hierarchy, eco-branding, and product value communication.</p>
+        </article>
+        <article class="piece">
+          <div class="shot" data-label="Consumer behaviour">
+            <img src="Consumer Behavior Website.jpeg" alt="Senior Citizen Healthcare Market Website" loading="lazy">
+          </div>
+          <span class="tag">Lead Developer</span>
           <h3>Consumer Behaviour Website</h3>
           <p>Built a comprehensive web platform analyzing the Senior Citizen Healthcare Market in Malaysia as part of a group consumer behaviour assignment. Designed with Canva and developed with clean HTML, CSS, and JS.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="events">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 data-rise>Event Campaigns</h2>
+      </div>
+      <article class="event">
+        <div class="shot-wrap">
+          <div class="shot" data-label="UNITE Conference" data-tilt>
+            <img src="Event.jpeg" alt="UNITE Conference Event Setup" loading="lazy">
+            <span class="metric">160+ delegates across Southeast Asia</span>
+          </div>
+        </div>
+        <div>
+          <h3>UNITE Conference</h3>
+          <p class="sub">International campus student conference</p>
+          <span class="role">Head of Department for Logistics</span>
+          <p class="body">Led a junior logistics team to secure food, vendor contracts, and lodging for 160+ campus delegates across Southeast Asia.</p>
+          <p class="body">Successfully cut catering costs by 10–15% while executing smooth operations for 160+ regional delegates.</p>
+        </div>
+      </article>
+      <article class="event rev">
+        <div class="shot-wrap">
+          <div class="shot" data-label="Cultural Night" data-tilt>
+            <img src="Cultural Night.jpeg" alt="Cultural Night Event Gathering" loading="lazy">
+            <span class="metric">Cultural Night at Sunway Hub</span>
+          </div>
+        </div>
+        <div>
+          <h3>Social Events</h3>
+          <p class="sub">Social gatherings for campus students</p>
+          <span class="role">Head of Department for Logistics</span>
+          <p class="body">Planned and executed interactive games, managed vendor setup, and catered food for regional student socials.</p>
+          <p class="body">Achieved 95%+ attendee satisfaction and seamless execution across all interactive sessions.</p>
         </div>
       </article>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- 04 EVENTS -->
-<section id="events">
-  <div class="wrap">
-    <div class="eyebrow rv"><b>04</b> On the Ground</div>
-    <h2 class="title rv d1">Event<br>Campaigns</h2>
-
-    <div class="event ev rv">
-      <div class="ev-media crowd">
-        <div class="hov" data-label="160+ delegates"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6M15 20c0-2.5 1.5-4.5 4-4.5s3 1.5 3 4.5"/></svg></div>
-        <img src="Event.jpeg" alt="UNITE Conference Event Setup">
-        <span class="ev-badge">160+ Delegates · Southeast Asia</span>
+  <section id="experience">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 data-rise>Where I've Worked</h2>
       </div>
-      <div>
-        <h3>UNITE Conference</h3>
-        <h4>International campus student conference</h4>
-        <p class="role">Role: Head of Department for Logistics</p>
-        <p>Led a junior logistics team to secure food, vendor contracts, and lodging for 160+ campus delegates across Southeast Asia.</p>
-        <p>Successfully cut catering costs by 10–15% while executing smooth operations for 160+ regional delegates.</p>
+      <div class="ledger">
+        <article class="row">
+          <time>Jan 2026 – Apr 2026</time>
+          <div><h3>Research Assistant</h3><p class="org">Sunway University</p></div>
+          <ul>
+            <li>Processed and analyzed quantitative/qualitative datasets to extract key findings and actionable insights.</li>
+            <li>Synthesized complex academic literature into clear, structured summaries to support ongoing project goals.</li>
+          </ul>
+        </article>
+        <article class="row">
+          <time>Apr 2022 – Dec 2025</time>
+          <div><h3>Event Manager</h3><p class="org">Every Nation Church (Sunway)</p></div>
+          <ul>
+            <li>Streamlined logistics, vendor contracts, and budgets for 20+ large-scale events (for up to 160+ participants), cutting venue/vendor costs by 10–15%.</li>
+            <li>Led staff planning meetings to define event themes and align teams on core operational goals.</li>
+            <li>Trained and mentored 10+ junior planners on event coordination best practices and customer service standards.</li>
+          </ul>
+        </article>
+        <article class="row">
+          <time>Jan 2021 – Dec 2023</time>
+          <div><h3>Social Media Coordinator</h3><p class="org">Every Nation Church (Sunway)</p></div>
+          <ul>
+            <li>Developed end-to-end social media strategies and published 5 to 10 monthly posts, driving a 60% increase in profile visitors.</li>
+            <li>Monitored analytics and performance metrics to optimize posting schedules and campaign reach.</li>
+            <li>Managed community interaction, responding to DMs and comments to build brand loyalty.</li>
+          </ul>
+        </article>
+        <article class="row">
+          <time>Jan 2021 – Dec 2022</time>
+          <div><h3>Social Media Coordinator</h3><p class="org">Boys' Brigade 8th Petaling Jaya</p></div>
+          <ul>
+            <li>Produced 10+ digital assets monthly and analyzed engagement metrics.</li>
+            <li>Managed community interaction, responding to DMs and comments to build brand loyalty.</li>
+          </ul>
+        </article>
       </div>
     </div>
+  </section>
 
-    <div class="event ev rev rv">
-      <div class="ev-media social-bg">
-        <div class="hov" data-label="95%+ satisfaction"><svg viewBox="0 0 24 24"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></svg></div>
-        <img src="Cultural Night.jpeg" alt="Cultural Night Event Gathering">
-        <span class="ev-badge">Cultural Night @ Sunway Hub</span>
+  <section id="skills">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 data-rise>What I Bring</h2>
       </div>
-      <div>
-        <h3>Social Events</h3>
-        <h4>Social gatherings for campus students</h4>
-        <p class="role">Role: Head of Department for Logistics</p>
-        <p>Planned and executed interactive games, managed vendor setup, and catered food for regional student socials.</p>
-        <p>Achieved 95%+ attendee satisfaction and seamless execution across all interactive sessions.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 05 EXPERIENCE -->
-<section id="experience">
-  <div class="wrap">
-    <div class="eyebrow rv"><b>05</b> Experience</div>
-    <h2 class="title rv d1">Where I've<br>Worked</h2>
-    <div class="tl">
-    <article class="tl-item rv" style="--c:var(--teal)">
-      <span class="tl-ico"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5"/></svg></span>
-      <div class="tl-card">
-        <div class="tl-meta">Jan 2026 – Apr 2026</div>
-        <h3>Research Assistant</h3><h4>Sunway University</h4>
-        <ul><li>Processed and analyzed quantitative/qualitative datasets to extract key findings and actionable insights.</li><li>Synthesized complex academic literature into clear, structured summaries to support ongoing project goals.</li></ul>
-      </div>
-    </article>
-    <article class="tl-item rv" style="--c:var(--orange)">
-      <span class="tl-ico"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 10h18M12 13l1 2 2 .3-1.5 1.4.4 2-1.9-1-1.9 1 .4-2L9 15.3l2-.3z"/></svg></span>
-      <div class="tl-card">
-        <div class="tl-meta">Apr 2022 – Dec 2025</div>
-        <h3>Event Manager</h3><h4>Every Nation Church (Sunway)</h4>
-        <ul><li>Streamlined logistics, vendor contracts, and budgets for 20+ large-scale events (for up to 160+ participants), cutting venue/vendor costs by 10–15%.</li><li>Led staff planning meetings to define event themes and align teams on core operational goals.</li><li>Trained and mentored 10+ junior planners on event coordination best practices and customer service standards.</li></ul>
-      </div>
-    </article>
-    <article class="tl-item rv" style="--c:var(--navy)">
-      <span class="tl-ico"><svg viewBox="0 0 24 24"><path d="M21 12a8 8 0 01-11.7 7L3 21l2-5.7A8 8 0 1121 12z"/></svg></span>
-      <div class="tl-card">
-        <div class="tl-meta">Jan 2021 – Dec 2023</div>
-        <h3>Social Media Coordinator</h3><h4>Every Nation Church (Sunway)</h4>
-        <ul><li>Developed end-to-end social media strategies and published 5 to 10 monthly posts, driving a 60% increase in profile visitors.</li><li>Monitored analytics and performance metrics to optimize posting schedules and campaign reach.</li><li>Managed community interaction, responding to DMs and comments to build brand loyalty.</li></ul>
-      </div>
-    </article>
-    <article class="tl-item rv" style="--c:var(--teal)">
-      <span class="tl-ico"><svg viewBox="0 0 24 24"><path d="M3 11l13-6v14L3 13zM3 11v2M16 9l4-2M16 12h5M16 15l4 2"/></svg></span>
-      <div class="tl-card">
-        <div class="tl-meta">Jan 2021 – Dec 2022</div>
-        <h3>Social Media Coordinator</h3><h4>Boys' Brigade 8th Petaling Jaya</h4>
-        <ul><li>Produced 10+ digital assets monthly and analyzed engagement metrics.</li><li>Managed community interaction, responding to DMs and comments to build brand loyalty.</li></ul>
-      </div>
-    </article>
-    </div>
-  </div>
-</section>
-
-<!-- 06 SKILLS -->
-<section id="skills">
-  <div class="wrap">
-    <div class="eyebrow rv"><b>06</b> Skills &amp; Credentials</div>
-    <h2 class="title rv d1">What I<br>Bring</h2>
-    <div class="skill-grid">
-      <div class="sk rv"><svg viewBox="0 0 24 24"><path d="M21 12a8 8 0 01-11.7 7L3 21l2-5.7A8 8 0 1121 12z"/></svg><span>Social Media Strategy &amp; Copywriting<small>Content planning · captions · community</small></span></div>
-      <div class="sk rv"><svg viewBox="0 0 24 24"><path d="M4 20l1-5L16 4l4 4L9 19zM14 6l4 4"/></svg><span>Visual Design<small>Canva · Photoshop · CapCut</small></span></div>
-      <div class="sk rv"><svg viewBox="0 0 24 24"><path d="M8 8l-5 4 5 4M16 8l5 4-5 4M14 5l-4 14"/></svg><span>Web Dev &amp; Coding<small>HTML · CSS · JS · Python</small></span></div>
-      <div class="sk rv"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 10h18M12 13l1 2 2 .3-1.5 1.4.4 2-1.9-1-1.9 1 .4-2L9 15.3l2-.3z"/></svg><span>Events &amp; PR Logistics<small>Vendors · budgets · run-of-show</small></span></div>
-      <div class="sk rv"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5"/></svg><span>Market &amp; Competitor Research<small>Audience and trend insights</small></span></div>
-      <div class="sk rv"><svg viewBox="0 0 24 24"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8zM19 16l.8 2.2L22 19l-2.2.8L19 22l-.8-2.2L16 19l2.2-.8z"/></svg><span>AI Prompting &amp; Gen AI Tools<small>Faster, sharper content workflows</small></span></div>
-    </div>
-
-    <div class="two">
-      <div class="panel rv">
-        <h3>Education</h3>
-        <div class="edu">
-          <b>BSc (Hons) Marketing</b>
-          <span>Sunway University</span>
-          <em>Jan 2025 – Feb 2028</em>
-          <div class="gpa">Cumulative GPA <strong>3.31</strong></div>
+      <div class="skills-grid">
+        <ul class="skill-list">
+          <li><strong>Social media strategy and copywriting</strong><span>Content planning, captions, community</span></li>
+          <li><strong>Visual design</strong><span>Canva, Photoshop, CapCut</span></li>
+          <li><strong>Web development and coding</strong><span>HTML, CSS, JS, Python</span></li>
+          <li><strong>Events and PR logistics</strong><span>Vendors, budgets, run-of-show</span></li>
+          <li><strong>Market and competitor research</strong><span>Audience and trend insights</span></li>
+          <li><strong>AI prompting and generative AI tools</strong><span>Faster, sharper content workflows</span></li>
+        </ul>
+        <div>
+          <div class="block">
+            <h3>Education</h3>
+            <p class="edu-name">BSc (Hons) Marketing</p>
+            <p class="edu-sub">Sunway University, Jan 2025 – Feb 2028</p>
+            <div class="gpa"><b>3.31</b><span>Cumulative GPA</span></div>
+          </div>
+          <div class="block">
+            <h3>Languages</h3>
+            <div class="lang"><div class="lang-top"><span style="color:var(--ink);font-weight:500">English</span><span>Advanced</span></div><div class="meter"><i style="--w:92%"></i></div></div>
+            <div class="lang"><div class="lang-top"><span style="color:var(--ink);font-weight:500">Chinese</span><span>Intermediate</span></div><div class="meter"><i style="--w:62%"></i></div></div>
+            <div class="lang"><div class="lang-top"><span style="color:var(--ink);font-weight:500">Malay</span><span>Intermediate</span></div><div class="meter"><i style="--w:62%"></i></div></div>
+            <p class="note">Spoken, written and reading</p>
+          </div>
+          <div class="block">
+            <h3>Soft skills</h3>
+            <ul class="soft">
+              <li>Teamwork and collaboration</li><li>Written and verbal communication</li><li>Problem-solving and adaptability</li><li>Organizational skills</li><li>Eagerness to learn</li><li>Ability to work under pressure</li>
+            </ul>
+          </div>
         </div>
       </div>
-      <div class="panel rv d1">
-        <h3>Languages</h3>
-        <div class="lang"><div class="lang-top"><b>English</b><span>Advanced</span></div><div class="meter"><i style="--w:92%"></i></div></div>
-        <div class="lang"><div class="lang-top"><b>Chinese</b><span>Intermediate</span></div><div class="meter"><i style="--w:62%"></i></div></div>
-        <div class="lang"><div class="lang-top"><b>Malay</b><span>Intermediate</span></div><div class="meter"><i style="--w:62%"></i></div></div>
-        <p class="lang-note">Spoken, written &amp; reading</p>
-      </div>
-    </div>
-
-    <div class="panel rv">
-      <h3>Soft Skills</h3>
-      <div><span class="chip">Teamwork &amp; Collaboration</span><span class="chip">Written &amp; Verbal Communication</span><span class="chip">Problem-Solving &amp; Adaptability</span><span class="chip">Organizational Skills</span><span class="chip">Eagerness to Learn</span><span class="chip">Ability to Work Under Pressure</span></div>
-    </div>
-
-    <div class="panel rv">
-      <h3>Certifications</h3>
       <div class="certs">
-        <div class="cert"><svg viewBox="0 0 24 24"><circle cx="12" cy="9" r="6"/><path d="M8.5 14L7 22l5-3 5 3-1.5-8"/></svg><div><b>Digital Marketing</b><small>IBM SkillsBuild</small></div></div>
-        <div class="cert"><svg viewBox="0 0 24 24"><circle cx="12" cy="9" r="6"/><path d="M8.5 14L7 22l5-3 5 3-1.5-8"/></svg><div><b>Project Management Fundamentals</b><small>IBM SkillsBuild</small></div></div>
-        <div class="cert"><svg viewBox="0 0 24 24"><circle cx="12" cy="9" r="6"/><path d="M8.5 14L7 22l5-3 5 3-1.5-8"/></svg><div><b>Generative AI &amp; Content Creation (Adobe Firefly)</b><small>IBM SkillsBuild</small></div></div>
-        <div class="cert"><svg viewBox="0 0 24 24"><circle cx="12" cy="9" r="6"/><path d="M8.5 14L7 22l5-3 5 3-1.5-8"/></svg><div><b>Craft Precise Prompts for AI Models</b><small>IBM SkillsBuild</small></div></div>
-        <div class="cert"><svg viewBox="0 0 24 24"><circle cx="12" cy="9" r="6"/><path d="M8.5 14L7 22l5-3 5 3-1.5-8"/></svg><div><b>Introduction to UX Design</b><small>IBM SkillsBuild</small></div></div>
-        <div class="cert"><svg viewBox="0 0 24 24"><circle cx="12" cy="9" r="6"/><path d="M8.5 14L7 22l5-3 5 3-1.5-8"/></svg><div><b>Applied Artificial Intelligence Fundamentals</b><small>IBM SkillsBuild</small></div></div>
+        <h3 style="font:700 1.5rem/1 var(--f-display);letter-spacing:-.02em;margin-bottom:16px">Certifications</h3>
+        <ul>
+          <li><b>Digital Marketing</b><small>IBM SkillsBuild</small></li>
+          <li><b>Project Management Fundamentals</b><small>IBM SkillsBuild</small></li>
+          <li><b>Generative AI and Content Creation (Adobe Firefly)</b><small>IBM SkillsBuild</small></li>
+          <li><b>Craft Precise Prompts for AI Models</b><small>IBM SkillsBuild</small></li>
+          <li><b>Introduction to UX Design</b><small>IBM SkillsBuild</small></li>
+          <li><b>Applied Artificial Intelligence Fundamentals</b><small>IBM SkillsBuild</small></li>
+        </ul>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- 07 HOW I WORK -->
-<section id="work">
-  <div class="wrap">
-    <div class="work-top">
-      <div>
-        <div class="eyebrow rv"><b>07</b> Process</div>
-        <h2 class="title rv d1">How I<br>Work</h2>
-        <div class="bar rv d1"></div>
-        <p class="lead rv d2">A clear, collaborative process that turns ideas into engaging content and seamless events.</p>
-      </div>
-      <div class="notebook rv d2" aria-hidden="true">
-        <ol><li>IDEA 💡</li><li>STRATEGY</li><li>CONTENT</li><li>ENGAGE</li><li>RESULTS</li></ol>
-      </div>
-    </div>
-
-    <div class="steps">
-      <div class="step rv" style="--c:var(--navy)"><span class="n">01</span><h3>Discover</h3><p>Audience and trend research</p></div>
-      <div class="step rv d1" style="--c:var(--teal)"><span class="n">02</span><h3>Plan</h3><p>Strategy &amp; team alignment</p></div>
-      <div class="step rv d2" style="--c:var(--orange)"><span class="n">03</span><h3>Create</h3><p>Asset production &amp; copywriting</p></div>
-      <div class="step rv d3" style="--c:var(--teal)"><span class="n">04</span><h3>Deliver</h3><p>Campaign execution &amp; analytics</p></div>
-    </div>
-
-    <div class="caps rv">
-      <div class="mega"><svg viewBox="0 0 64 64"><path d="M10 28l30-14v36L10 36zM10 28v8M40 20l8-4v32l-8-4M18 38l3 12h6l-2-10M52 22l5-3M54 32h6M52 42l5 3"/></svg></div>
-      <div class="caps-in">
-        <h3>Capabilities</h3><div class="bar"></div>
-        <div class="cap-grid">
-          <div class="cap"><svg viewBox="0 0 24 24"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4h6v3H9zM8.5 11l3 3M11.5 11l-3 3M13 17l3-2"/></svg><span>Content strategy</span></div>
-          <div class="cap"><svg viewBox="0 0 24 24"><path d="M4 20l1-5L16 4l4 4L9 19zM14 6l4 4"/></svg><span>Social copy and design</span></div>
-          <div class="cap"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 10h18M12 13l1 2 2 .3-1.5 1.4.4 2-1.9-1-1.9 1 .4-2L9 15.3l2-.3z"/></svg><span>Event promotion</span></div>
-          <div class="cap"><svg viewBox="0 0 24 24"><rect x="7" y="8" width="10" height="14" rx="2"/><path d="M10 5l1-3M12 8V4M10 12h4M10 15h4M10 18h4"/></svg><span>On-site coordination</span></div>
-          <div class="cap"><svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 109 9h-9zM15 3.5A9 9 0 0120.5 9H15z"/></svg><span>Reporting and insights</span></div>
+  <section id="process">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <h2 data-rise>How I Work</h2>
+          <ol class="flow" aria-label="From idea to results"><li>Idea</li><li>Strategy</li><li>Content</li><li>Engage</li><li>Results</li></ol>
         </div>
+        <p class="lead" data-rise>A clear, collaborative process that turns ideas into engaging content and seamless events.</p>
       </div>
+      <ol class="steps">
+        <li class="step"><b>1</b><h3>Discover</h3><p>Audience and trend research</p></li>
+        <li class="step"><b>2</b><h3>Plan</h3><p>Strategy and team alignment</p></li>
+        <li class="step"><b>3</b><h3>Create</h3><p>Asset production and copywriting</p></li>
+        <li class="step"><b>4</b><h3>Deliver</h3><p>Campaign execution and analytics</p></li>
+      </ol>
     </div>
-  </div>
-</section>
+    <div class="marquee" aria-hidden="true" data-marquee="-1">
+      <div class="track"><span>Content strategy</span><span>Social copy and design</span><span>Event promotion</span><span>On-site coordination</span><span>Reporting and insights</span></div>
+    </div>
+  </section>
 
-<!-- 08 CONNECT -->
-<section id="connect">
-  <div class="wrap con">
-    <div>
-      <div class="eyebrow rv" style="color:#9fd0d3"><b>08</b> Contact</div>
-      <h2 class="title rv d1">Let's<br>Connect</h2>
-      <div class="bar rv d1"></div>
-      <ul class="list rv d2">
-        <li><span><i><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg></i>Lai Jia Hao</span></li>
-        <li><a href="mailto:laijiahao03@gmail.com"><i><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></i>laijiahao03@gmail.com</a></li>
-        <li><a href="tel:+60166061573"><i><svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"/></svg></i>+6016 606 1573</a></li>
-        <li><a href="https://www.linkedin.com/in/lai-jia-hao-2a072b317/" id="linkedin" target="_blank" rel="noopener"><i><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10v7M8 7v.01M12 17v-7M12 13c0-2 1.5-3 3-3s2.5 1 2.5 3v4"/></svg></i>LinkedIn</a></li>
-        <li><a href="https://github.com/LaiJiaHao-projects" id="github" target="_blank" rel="noopener"><i><svg viewBox="0 0 24 24"><path d="M9 19c-4 1.3-4-2-6-2.5m12 4.5v-3.2a2.8 2.8 0 00-.8-2.2c2.7-.3 5.5-1.3 5.5-6a4.600 4.600 0 00-1.300-3.200 4.300 4.300 0 00-.1-3.200s-1-.3-3.400 1.300a11.600 11.600 0 00-6.200 0C6.300 2.800 5.300 3.100 5.300 3.100a4.300 4.300 0 00-.1 3.200A4.600 4.600 0 003.900 9.500c0 4.600 2.800 5.700 5.500 6a2.800 2.800 0 00-.8 2.200V21"/></svg></i>GitHub</a></li>
+  <section id="contact">
+    <div class="wrap">
+      <h2 data-rise>Let's Connect</h2>
+      <div>
+        <a class="mail" href="mailto:laijiahao03@gmail.com">laijiahao03@gmail.com</a>
+        <button class="copy" type="button" data-copy="laijiahao03@gmail.com">Copy email</button>
+      </div>
+      <ul class="reach">
+        <li><small>Phone</small><span class="v">+6016 606 1573</span> <button class="copy" type="button" data-copy="+60166061573" style="margin-left:8px">Copy</button></li>
+        <li><small>LinkedIn</small><a href="https://www.linkedin.com/in/lai-jia-hao-2a072b317/" target="_blank" rel="noopener">linkedin.com/in/lai-jia-hao</a></li>
+        <li><small>GitHub</small><a href="https://github.com/LaiJiaHao-projects" target="_blank" rel="noopener">github.com/LaiJiaHao-projects</a></li>
       </ul>
-      <p class="closing rv d3">Ready to bring strategic creativity and seamless execution to your team — let's build something impactful together!</p>
+      <p class="closing">Ready to bring <mark>strategic creativity</mark> and seamless execution to your team. Let's build something impactful together.</p>
     </div>
-    <div class="pass rv d2" aria-hidden="true">
-      <div class="pass-in"><h4>EVENT<br>PASS</h4><hr><div class="ph">LAI JIA HAO</div><div class="stripe"></div></div>
-    </div>
-  </div>
-</section>
+  </section>
+</main>
 
-<footer>© <span id="yr"></span> Lai Jia Hao · Social Media &amp; Event Portfolio</footer>
+<footer>
+  <div class="wrap"><span>© <span id="yr">2026</span> Lai Jia Hao</span><span>Lai Jia Hao's Portfolio</span></div>
+</footer>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.20/dist/lenis.min.js"></script>
 <script>
 (function(){
-  var nav=document.getElementById('nav'),bar=document.getElementById('progress'),
-      burger=document.getElementById('burger'),links=document.getElementById('links');
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var fine = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  var hasG = typeof gsap !== 'undefined';
+  var hasST = hasG && typeof ScrollTrigger !== 'undefined';
+  if (hasST) gsap.registerPlugin(ScrollTrigger);
 
-  var LINKEDIN_URL='https://www.linkedin.com/in/lai-jia-hao-2a072b317/';
-  var GITHUB_URL='https://github.com/LaiJiaHao-projects';
-  document.getElementById('linkedin').href=LINKEDIN_URL;
-  document.getElementById('github').href=GITHUB_URL;
-  document.getElementById('yr').textContent=new Date().getFullYear();
-
-  burger.addEventListener('click',function(){
-    var open=links.classList.toggle('open');
-    burger.setAttribute('aria-expanded',open);
-  });
-  links.addEventListener('click',function(e){
-    if(e.target.tagName==='A'){links.classList.remove('open');burger.setAttribute('aria-expanded',false)}
-  });
-
-  var secs=[].slice.call(document.querySelectorAll('section[id]')),
-      anchors=[].slice.call(links.querySelectorAll('a'));
-  function onScroll(){
-    var h=document.documentElement,max=h.scrollHeight-h.clientHeight,y=h.scrollTop;
-    bar.style.width=(max>0?y/max*100:0)+'%';
-    nav.classList.toggle('scrolled',y>10);
-    var cur=secs[0].id;
-    secs.forEach(function(s){if(y+120>=s.offsetTop)cur=s.id});
-    anchors.forEach(function(a){a.classList.toggle('active',a.getAttribute('href')==='#'+cur)});
+  function onTick(fn){
+    if (hasG) { gsap.ticker.add(fn); }
+    else { (function loop(t){ fn(t/1000); requestAnimationFrame(loop); })(0); }
   }
-  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
 
-  var io=new IntersectionObserver(function(es){
-    es.forEach(function(e){
-      if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}
-    });
-  },{threshold:.15});
-  document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
-
-  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  function fmt(el,v){
-    el.textContent=(el.dataset.prefix||'')+Math.round(v)+(el.dataset.suffix||'');
-  }
-  var co=new IntersectionObserver(function(es){
-    es.forEach(function(e){
-      if(!e.isIntersecting)return;
-      var el=e.target,end=+el.dataset.count,start=+(el.dataset.from||0),t0=null;
-      co.unobserve(el);
-      if(reduce){fmt(el,end);return}
-      (function step(t){
-        if(!t0)t0=t;
-        var p=Math.min((t-t0)/1400,1),eased=1-Math.pow(1-p,3);
-        fmt(el,start+(end-start)*eased);
-        if(p<1)requestAnimationFrame(step);
-      })(performance.now());
-    });
-  },{threshold:.6});
-  document.querySelectorAll('[data-count]').forEach(function(el){co.observe(el)});
-
-  var heart=document.getElementById('heart'),liked=true;
-  if(heart)heart.addEventListener('click',function(){
-    liked=!liked;
-    heart.style.fill=liked?'var(--orange)':'none';
-    heart.style.stroke=liked?'var(--orange)':'var(--navy)';
-  });
-
-  // Expand / Collapse functionality for the poster shot
-  var posterShot = document.getElementById('posterShot');
-  var expandBadge = document.getElementById('expandBadge');
-  if(posterShot){
-    posterShot.addEventListener('click', function(){
-      var isExpanded = posterShot.classList.toggle('expanded');
-      if(expandBadge){
-        expandBadge.textContent = isExpanded ? 'Click to Collapse' : 'Click to Expand';
+  /* ---------- Lenis smooth scroll ---------- */
+  var lenis = null;
+  if (!reduce && typeof Lenis !== 'undefined') {
+    try {
+      lenis = new Lenis({ duration: 1.1, smoothWheel: true });
+      if (hasST) {
+        lenis.on('scroll', ScrollTrigger.update);
+        gsap.ticker.add(function(t){ lenis.raf(t * 1000); });
+        gsap.ticker.lagSmoothing(0);
+      } else {
+        (function raf(t){ lenis.raf(t); requestAnimationFrame(raf); })(0);
       }
+    } catch (e) { lenis = null; }
+  }
+
+  /* ---------- Anchors ---------- */
+  var nav = document.getElementById('nav');
+  var menuBtn = document.getElementById('menuBtn');
+  menuBtn.addEventListener('click', function(){
+    var open = nav.classList.toggle('open');
+    menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){
+    a.addEventListener('click', function(e){
+      var id = a.getAttribute('href');
+      var target = id === '#top' ? document.documentElement : document.querySelector(id);
+      if (!target) return;
+      e.preventDefault();
+      nav.classList.remove('open');
+      menuBtn.setAttribute('aria-expanded', 'false');
+      if (lenis) { lenis.scrollTo(id === '#top' ? 0 : target, { offset: -60 }); }
+      else if (id === '#top') { window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' }); }
+      else { target.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' }); }
+    });
+  });
+
+  /* ---------- Progress bar and active link ---------- */
+  var bar = document.getElementById('bar');
+  function progress(){
+    var h = document.documentElement;
+    var max = h.scrollHeight - h.clientHeight;
+    bar.style.transform = 'scaleX(' + (max > 0 ? Math.min(1, window.scrollY / max) : 0) + ')';
+  }
+  window.addEventListener('scroll', progress, { passive: true });
+  progress();
+
+  var linkMap = {};
+  document.querySelectorAll('#links a').forEach(function(a){ linkMap[a.getAttribute('href').slice(1)] = a; });
+  if ('IntersectionObserver' in window) {
+    var spy = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if (!en.isIntersecting) return;
+        Object.keys(linkMap).forEach(function(k){ linkMap[k].classList.toggle('on', k === en.target.id); });
+      });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    Object.keys(linkMap).forEach(function(k){ var s = document.getElementById(k); if (s) spy.observe(s); });
+  }
+
+  /* ---------- Clock (Malaysia time) ---------- */
+  var clock = document.getElementById('clock');
+  function tickClock(){
+    try {
+      var t = new Intl.DateTimeFormat('en-GB', { timeZone: 'Asia/Kuala_Lumpur', hour: '2-digit', minute: '2-digit', hour12: false }).format(new Date());
+      clock.textContent = 'MYT ' + t;
+    } catch (e) { clock.textContent = 'MYT'; }
+  }
+  tickClock(); setInterval(tickClock, 20000);
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  /* ---------- Image fallbacks ---------- */
+  document.querySelectorAll('.shot img').forEach(function(img){
+    function bad(){ img.classList.add('bad'); }
+    img.addEventListener('error', bad);
+    if (img.complete && img.naturalWidth === 0) bad();
+  });
+
+  /* ---------- Poster expand ---------- */
+  var poster = document.getElementById('poster'), posterBtn = document.getElementById('posterBtn');
+  if (poster && posterBtn) posterBtn.addEventListener('click', function(){
+    var open = poster.classList.toggle('open');
+    posterBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    posterBtn.textContent = open ? 'Collapse poster' : 'Expand poster';
+  });
+
+  /* ---------- Copy buttons ---------- */
+  document.querySelectorAll('[data-copy]').forEach(function(btn){
+    var label = btn.textContent;
+    btn.addEventListener('click', function(){
+      var text = btn.getAttribute('data-copy');
+      function done(){ btn.textContent = 'Copied'; setTimeout(function(){ btn.textContent = label; }, 1600); }
+      function fallback(){
+        var ta = document.createElement('textarea');
+        ta.value = text; ta.setAttribute('readonly', ''); ta.style.position = 'fixed'; ta.style.opacity = '0';
+        document.body.appendChild(ta); ta.select();
+        try { document.execCommand('copy'); done(); } catch (e) {}
+        document.body.removeChild(ta);
+      }
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(done, fallback);
+      } else { fallback(); }
+    });
+  });
+
+  /* ---------- Hero name: pressure-reactive type (React Bits TextPressure idea) ---------- */
+  var name = document.getElementById('name');
+  var chars = [];
+  if (name) {
+    name.querySelectorAll('.line').forEach(function(line){
+      var t = line.textContent; line.textContent = ''; line.setAttribute('aria-hidden', 'true');
+      for (var i = 0; i < t.length; i++) {
+        var s = document.createElement('span');
+        if (t[i] === ' ') { s.className = 'sp'; }
+        else { s.className = 'ch'; s.textContent = t[i]; chars.push(s); }
+        line.appendChild(s);
+      }
+    });
+    name.setAttribute('aria-label', 'Lai Jia Hao');
+  }
+  function paint(el, w){
+    el.style.fontVariationSettings = "'wght' " + Math.round(w) + ", 'wdth' 100";
+    var p = Math.max(0, Math.min(100, (w - 560) / 240 * 100));
+    el.style.color = 'color-mix(in srgb, var(--cobalt) ' + Math.round(p) + '%, var(--ink))';
+  }
+  if (chars.length) {
+    var cur = chars.map(function(){ return 560; });
+    if (reduce) {
+      chars.forEach(function(c){ paint(c, 600); });
+    } else {
+      var mx = -9999, my = -9999, lastMove = -99999;
+      if (fine) window.addEventListener('pointermove', function(e){ mx = e.clientX; my = e.clientY; lastMove = performance.now(); }, { passive: true });
+      if (hasG) gsap.from(chars, { yPercent: 38, duration: 1, stagger: 0.05, ease: 'power3.out' });
+      onTick(function(){
+        var r0 = name.getBoundingClientRect();
+        if (r0.bottom < 0) return;
+        var now = performance.now();
+        var live = fine && (now - lastMove) < 2500;
+        for (var i = 0; i < chars.length; i++) {
+          var target;
+          if (live) {
+            var r = chars[i].getBoundingClientRect();
+            var d = Math.hypot(mx - (r.left + r.width / 2), my - (r.top + r.height / 2));
+            var f = Math.max(0, 1 - d / 280);
+            target = 360 + 440 * f * f;
+          } else {
+            target = 430 + 270 * ((Math.sin(now / 750 - i * 0.6) + 1) / 2);
+          }
+          cur[i] += (target - cur[i]) * 0.12;
+          paint(chars[i], cur[i]);
+        }
+      });
+    }
+  }
+
+/* ---------- Auto Marquee ---------- */
+var vel = 0, lastY = window.scrollY, lastT = performance.now();
+
+document.querySelectorAll('[data-marquee]').forEach(function(m){
+  var dir = +m.getAttribute('data-marquee') || 1;
+  var track = m.querySelector('.track');
+
+  if (!track) return;
+
+  var original = track.innerHTML;
+
+  // Duplicate the content so the loop is seamless
+  track.innerHTML = original + original + original + original;
+
+  var setW = 0;
+  var x = 0;
+
+  function measure(){
+    setW = track.scrollWidth / 4;
+  }
+
+  measure();
+
+  window.addEventListener('resize', measure);
+
+  if (document.fonts && document.fonts.ready) {
+    document.fonts.ready.then(measure);
+  }
+
+  var last = performance.now();
+
+  function animate(now){
+    var dt = Math.min(0.05, (now - last) / 1000);
+    last = now;
+
+    // Normal automatic movement + slight scroll-speed boost
+    var boost = Math.min(Math.abs(vel) / 900, 6);
+
+    x -= dir * (60 + 140 * boost) * dt;
+
+    // Seamless looping
+    if (setW > 0) {
+      while (x <= -setW) x += setW;
+      while (x > 0) x -= setW;
+    }
+
+    track.style.transform =
+      'translate3d(' + x.toFixed(2) + 'px, 0, 0)';
+
+    requestAnimationFrame(animate);
+  }
+
+  requestAnimationFrame(animate);
+});
+
+// Detect scrolling speed
+window.addEventListener('scroll', function(){
+  var now = performance.now();
+  var y = window.scrollY;
+  var dt = Math.max(1, now - lastT);
+
+  vel = vel * 0.6 + ((y - lastY) / dt * 1000) * 0.4;
+
+  lastY = y;
+  lastT = now;
+}, { passive: true });
+
+// Gradually reduce scroll boost when scrolling stops
+setInterval(function(){
+  if (performance.now() - lastT > 120) {
+    vel *= 0.5;
+  }
+}, 100);
+
+  /* ---------- Count up (React Bits CountUp idea) ---------- */
+  document.querySelectorAll('[data-count]').forEach(function(el){
+    var end = +el.getAttribute('data-count'), start = +(el.getAttribute('data-from') || 0);
+    var pre = el.getAttribute('data-prefix') || '', suf = el.getAttribute('data-suffix') || '';
+    var o = { v: start };
+    function show(){ el.textContent = pre + Math.round(o.v) + suf; }
+    if (!hasST) return;
+    ScrollTrigger.create({
+      trigger: el, start: 'top 88%', once: true,
+      onEnter: function(){
+        o.v = start || 0; show();
+        gsap.to(o, { v: end, duration: 1.6, ease: 'power3.out', onUpdate: show });
+      }
+    });
+  });
+
+  /* ---------- Small rise on scroll (content stays visible) ---------- */
+  if (hasST) {
+    gsap.utils.toArray('[data-rise], .case, .event, .row, .step, .piece').forEach(function(el){
+      gsap.from(el, { y: 26, duration: 0.9, ease: 'power3.out', scrollTrigger: { trigger: el, start: 'top 92%', once: true } });
+    });
+    gsap.utils.toArray('.meter i').forEach(function(el){
+      gsap.from(el, { scaleX: 0, duration: 1.2, ease: 'power3.out', scrollTrigger: { trigger: el, start: 'top 95%', once: true } });
+    });
+  }
+
+  /* ---------- Tilt (React Bits TiltedCard idea) and Magnet ---------- */
+  if (fine && hasG) {
+    document.querySelectorAll('[data-tilt]').forEach(function(el){
+      gsap.set(el, { transformPerspective: 900 });
+      var rx = gsap.quickTo(el, 'rotationX', { duration: 0.5, ease: 'power3' });
+      var ry = gsap.quickTo(el, 'rotationY', { duration: 0.5, ease: 'power3' });
+      el.addEventListener('pointermove', function(e){
+        var r = el.getBoundingClientRect();
+        ry(((e.clientX - r.left) / r.width - 0.5) * 8);
+        rx(-((e.clientY - r.top) / r.height - 0.5) * 8);
+      });
+      el.addEventListener('pointerleave', function(){ rx(0); ry(0); });
+    });
+    document.querySelectorAll('.magnet').forEach(function(el){
+      var qx = gsap.quickTo(el, 'x', { duration: 0.4, ease: 'power3' });
+      var qy = gsap.quickTo(el, 'y', { duration: 0.4, ease: 'power3' });
+      el.addEventListener('pointermove', function(e){
+        var r = el.getBoundingClientRect();
+        qx((e.clientX - (r.left + r.width / 2)) * 0.25);
+        qy((e.clientY - (r.top + r.height / 2)) * 0.35);
+      });
+      el.addEventListener('pointerleave', function(){ qx(0); qy(0); });
     });
   }
 })();
 </script>
-</body>
-</html>
+
+</body></html>
