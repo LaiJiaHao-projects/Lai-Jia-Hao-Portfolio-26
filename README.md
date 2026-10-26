@@ -1,4 +1,5 @@
 🚀 Lai Jia Hao | Marketing & Event Portfolio
+
 Welcome to the repository for my personal marketing & event portfolio website!
 This modern, single-page website showcases my work across social media strategy, visual design & web development, live event logistics, and academic research.
 
@@ -23,7 +24,3 @@ Google Fonts – Bricolage Grotesque, Instrument Sans, and DM Mono.
 
 📬 Connect
 Email: laijiahao03@gmail.com
-
-LinkedIn: linkedin.com/in/lai-jia-hao
-
-GitHub: github.com/LaiJiaHao-projects
